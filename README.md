@@ -14,6 +14,8 @@ CREATE DATABASE geomarketing
 
 ## 501-2 Create ```ppe``` table inside database ```geomarketing```
 
+### On Athena run:
+
 ``` 
 CREATE EXTERNAL TABLE geomarketing.ppe(
   brand string, 
@@ -33,6 +35,8 @@ LOCATION
 
 ## 501-3 Create ```pos_potential``` table inside database ```geomarketing```
 
+### On Athena run:
+
 ``` 
 CREATE EXTERNAL TABLE geomarketing.pos_potential(
   pos_id bigint, 
@@ -48,6 +52,8 @@ LOCATION
 ```
 
 ## 501-4 Create ```pos_attributes``` table inside database ```geomarketing```
+
+### On Athena run:
 
 ``` 
 CREATE EXTERNAL TABLE geomarketing.pos_attributes(
@@ -72,6 +78,8 @@ LOCATION
 ```
 
 ## 501-5 Create ```geo_germany``` table inside database ```geomarketing```
+
+### On Athena run:
 
 ``` 
 CREATE EXTERNAL TABLE geomarketing.geo_germany(
