@@ -165,7 +165,7 @@ val weightDF = sqlContext.sql("select x.landkreis,subtypology,(subtypology_avg/t
 weightDF.createOrReplaceTempView("weight")
 ```
 
-### Compute and wright final result
+### Compute and write final result
 
 ``` 
 val potentialAllocationDF = sqlContext.sql("select  pos_code,g.landkreis,a.subtypology,case when potential = 0 then weightLandkreis*potential_left else potential end as final_potential from  pos_attr a join pos_pot b on a.pos_id = b.pos_id join geography g on a.zipcode = g.zipcode join weight w on g.landkreis = w.landkreis and a.subtypology = w.subtypology join potential_to_allocate_landkreis p on g.landkreis = p.landkreis  where flag = 'Keep' order by 2,1")
